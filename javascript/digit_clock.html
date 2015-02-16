@@ -22,7 +22,47 @@
 <body>
 <h1>Digital Clock</h1>
 <span id="clock"></span>
-<body>
+
+<h1>
+<a href="javascript:new Date().toLocaleTimeString();">
+What time is it?
+</a>
+</h1>
+
+<h1>
+<a href="javascript:void window.open('about.blank');">Open Window</a>
+</h1>
+
+<!-- evaluate statement -->
+<h1>
+<a href='javascript:
+    var e = "", r = "";
+    do {
+        e = prompt("Expression: " + e + "\n" + r + "\n", e);;
+        try { r = "Result: " + eval(e); }
+        catch (ex) { r = ex; }
+    } while (e);
+    void 0;  /* prevents current window from being overwritten */
+    '>
+Javascript Evaluator
+</a>
+</h1>
+
+<h1>Table of Factorials</h1>
+<script>
+function factorial(n) {
+    if (n <= 1) return n;
+    else return n * factorial(n-1);
+}
+
+document.write("<table>");
+document.write("<tr><th>n</th><th>n!</th></tr>");
+for (var i = 1; i <= 10; i++) {
+    document.write("<tr><td>" + i + "</td><td>" + factorial(i) + "</td></tr>");
+}
+document.write("</table>");
+document.write("Generated at " + new Date());
+</script>
 </body>
 </html>
 
